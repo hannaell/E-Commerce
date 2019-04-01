@@ -33,7 +33,9 @@ namespace ecommerse
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors(
+                options => options.WithOrigins("*").AllowAnyMethod()
+                );
             app.UseMvc();
         }
     }

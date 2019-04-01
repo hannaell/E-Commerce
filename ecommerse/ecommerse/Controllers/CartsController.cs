@@ -14,47 +14,47 @@ using ecommerse.Repositories;
 namespace ecommerse.Controllers
 {
     [Route("api/[controller]")]
-    public class ProductsController : Controller
+    public class CartsController : Controller
     {
         private readonly string connectionString;
-        private readonly ProductsService productsService;
-        public ProductsController(IConfiguration configuration)
+        private readonly CartsService cartsService;
+        public CartsController(IConfiguration configuration)
         {
             this.connectionString = configuration.GetConnectionString("ConnectionString");
-            this.productsService = new ProductsService(new ProductsRepository(connectionString));
-        }
-
-        [HttpGet]
-        [ProducesResponseType(typeof(List<Products>), StatusCodes.Status200OK)]
-        public IActionResult Get()
-        {
-            var productItem = this.productsService.Get();
-            if (productItem == null)
-            {
-                return NotFound();
-            }
-            return Ok(productItem);
+            this.cartsService = new CartsService(new CartsRepository(connectionString));
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(Products), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Get(int id)
+        [ProducesResponseType(typeof(List<Products>), StatusCodes.Status200OK)]
+        public IActionResult GetCart(int id)
         {
-            var productItem = this.productsService.Get(id);
-            if (productItem == null)
+            var cartsItem = this.cartsService.GetCart(id);
+            if (cartsItem == null)
             {
                 return NotFound();
             }
-            return Ok(productItem);
+            return Ok(cartsItem);
         }
+
+        //[HttpGet("{id}")]
+        //[ProducesResponseType(typeof(List<Cartitem>), StatusCodes.Status200OK)]
+        //[ProducesResponseType(StatusCodes.Status404NotFound)]
+        //public IActionResult Get(int id)
+        //{
+        //    var cartsItem = this.cartsService.Get(id);
+        //    if (cartsItem == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(cartsItem);
+        //}
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Post([FromBody]Products products)
+        public IActionResult Post([FromBody]Cartitem cartitem)
         {
-            var result = this.productsService.Add(products);
+            var result = this.cartsService.Add(cartitem);
 
             if (!result)
             {
@@ -65,7 +65,7 @@ namespace ecommerse.Controllers
         }
 
         [HttpDelete("{id}")]
-        [ProducesResponseType(typeof(Products), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Carts), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public void Delete(int id)
         {
@@ -73,7 +73,7 @@ namespace ecommerse.Controllers
             //{
             //    connection.Execute("DELETE FROM News WHERE Id = @id", new { id });
             //}
-            this.productsService.Delete(id);
+            this.cartsService.DeleteCart(id);
         }
 
         //private static readonly List<Products> Database = new List<Products>
@@ -100,6 +100,8 @@ namespace ecommerse.Controllers
         //};
     }
 
-   
+
 
 }
+
+

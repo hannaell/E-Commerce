@@ -38,7 +38,7 @@ namespace ecommerse.Services
             {
                 return false;
             }
-            if (products.Quantity <= 0)
+            if (string.IsNullOrEmpty(products.Image))
             {
                 return false;
             }

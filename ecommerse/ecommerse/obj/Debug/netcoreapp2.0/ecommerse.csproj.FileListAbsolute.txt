@@ -3,9 +3,9 @@
 /Users/hannaell/Documents/GitHub/E-Commerce/ecommerse/ecommerse/bin/Debug/netcoreapp2.0/ecommerse.runtimeconfig.dev.json
 /Users/hannaell/Documents/GitHub/E-Commerce/ecommerse/ecommerse/bin/Debug/netcoreapp2.0/ecommerse.dll
 /Users/hannaell/Documents/GitHub/E-Commerce/ecommerse/ecommerse/bin/Debug/netcoreapp2.0/ecommerse.pdb
-/Users/hannaell/Documents/GitHub/E-Commerce/ecommerse/ecommerse/obj/Debug/netcoreapp2.0/ecommerse.csprojAssemblyReference.cache
 /Users/hannaell/Documents/GitHub/E-Commerce/ecommerse/ecommerse/obj/Debug/netcoreapp2.0/ecommerse.csproj.CoreCompileInputs.cache
 /Users/hannaell/Documents/GitHub/E-Commerce/ecommerse/ecommerse/obj/Debug/netcoreapp2.0/ecommerse.AssemblyInfoInputs.cache
 /Users/hannaell/Documents/GitHub/E-Commerce/ecommerse/ecommerse/obj/Debug/netcoreapp2.0/ecommerse.AssemblyInfo.cs
 /Users/hannaell/Documents/GitHub/E-Commerce/ecommerse/ecommerse/obj/Debug/netcoreapp2.0/ecommerse.dll
 /Users/hannaell/Documents/GitHub/E-Commerce/ecommerse/ecommerse/obj/Debug/netcoreapp2.0/ecommerse.pdb
+/Users/hannaell/Documents/GitHub/E-Commerce/ecommerse/ecommerse/obj/Debug/netcoreapp2.0/ecommerse.csprojAssemblyReference.cache

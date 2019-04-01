@@ -5,7 +5,6 @@
     Adress varchar(128) NOT NULL,
     Zipcode int NOT NULL,
     City text NOT NULL,
-    Paid bool,
     CONSTRAINT Orders_pk PRIMARY KEY (id)
 );
 
@@ -34,3 +33,7 @@ CREATE TABLE Order_Products (
 SELECT Orders.* , Products.* FROM Order_Products
 LEFT JOIN Orders ON Order_Products.orders_id = orders_id
 LEFT JOIN Products ON Order_Products.products_id = products_id
+
+
+Img BLOB NOT NULL? i products?
+Stock int NOt NULL?

@@ -14,26 +14,26 @@ using ecommerse.Repositories;
 namespace ecommerse.Controllers
 {
     [Route("api/[controller]")]
-    public class ProductsController : Controller
+    public class CartitemController : Controller
     {
         private readonly string connectionString;
-        private readonly ProductsService productsService;
-        public ProductsController(IConfiguration configuration)
+        private readonly CartitemService cartitemService;
+        public CartitemController(IConfiguration configuration)
         {
             this.connectionString = configuration.GetConnectionString("ConnectionString");
-            this.productsService = new ProductsService(new ProductsRepository(connectionString));
+            this.cartitemService = new CartitemService(new CartitemRepository(connectionString));
         }
 
         [HttpGet]
         [ProducesResponseType(typeof(List<Products>), StatusCodes.Status200OK)]
         public IActionResult Get()
         {
-            var productItem = this.productsService.Get();
-            if (productItem == null)
+            var cartitemItem = this.cartitemService.Get();
+            if (cartitemItem == null)
             {
                 return NotFound();
             }
-            return Ok(productItem);
+            return Ok(cartitemItem);
         }
 
         [HttpGet("{id}")]
@@ -41,20 +41,20 @@ namespace ecommerse.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Get(int id)
         {
-            var productItem = this.productsService.Get(id);
-            if (productItem == null)
+            var cartitemItem = this.cartitemService.Get(id);
+            if (cartitemItem == null)
             {
                 return NotFound();
             }
-            return Ok(productItem);
+            return Ok(cartitemItem);
         }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Post([FromBody]Products products)
+        public IActionResult Post([FromBody]Cartitem cartitem)
         {
-            var result = this.productsService.Add(products);
+            var result = this.cartitemService.Add(cartitem);
 
             if (!result)
             {
@@ -73,7 +73,7 @@ namespace ecommerse.Controllers
             //{
             //    connection.Execute("DELETE FROM News WHERE Id = @id", new { id });
             //}
-            this.productsService.Delete(id);
+            this.cartitemService.Delete(id);
         }
 
         //private static readonly List<Products> Database = new List<Products>
@@ -100,6 +100,7 @@ namespace ecommerse.Controllers
         //};
     }
 
-   
+
 
 }
+

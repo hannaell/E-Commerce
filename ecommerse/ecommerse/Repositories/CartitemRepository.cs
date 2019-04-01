@@ -7,40 +7,40 @@ using MySql.Data.MySqlClient;
 
 namespace ecommerse.Repositories
 {
-    public class ProductsRepository
+    public class CartitemRepository
     {
         private readonly string connectionString;
 
-        public ProductsRepository(string connectionString)
+        public CartitemRepository(string connectionString)
         {
             this.connectionString = connectionString;
         }
 
-        public List<Products> Get()
+        public List<Cartitem> Get()
         {
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                return connection.Query<Products>("SELECT * FROM Products").ToList();
+                return connection.Query<Cartitem>("SELECT * FROM Cartitems").ToList();
 
             }
         }
 
-        public Products Get(int id)
+        public Cartitem Get(int id)
         {
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                return connection.QuerySingleOrDefault<Products>("SELECT * FROM Products WHERE Id = @id", new { id });
+                return connection.QuerySingleOrDefault<Cartitem>("SELECT * FROM Cartitems WHERE Id = @id", new { id });
 
             }
         }
 
-        public bool Add(Products products)
+        public bool Add(Cartitem cartitem)
         {
             if (true)
             {
                 using (var connection = new MySqlConnection(this.connectionString))
                 {
-                    connection.Execute("INSERT INTO Products (Product, Description, Price, Image) VALUES(@product, @description, @price, @image)", products);
+                    connection.Execute("INSERT INTO Cartitems (cart_id, product_id) VALUES(@cart_id, @product_id)", cartitem);
                 }
             }
             return false;
@@ -50,8 +50,9 @@ namespace ecommerse.Repositories
         {
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                connection.Execute("DELETE FROM Products WHERE Id = @id", new { id });
+                connection.Execute("DELETE FROM Cartitems WHERE Id = @id", new { id });
             }
         }
     }
 }
+

@@ -14,26 +14,26 @@ using ecommerse.Repositories;
 namespace ecommerse.Controllers
 {
     [Route("api/[controller]")]
-    public class ProductsController : Controller
+    public class OrdersController : Controller
     {
         private readonly string connectionString;
-        private readonly ProductsService productsService;
-        public ProductsController(IConfiguration configuration)
+        private readonly OrdersService ordersService;
+        public OrdersController(IConfiguration configuration)
         {
             this.connectionString = configuration.GetConnectionString("ConnectionString");
-            this.productsService = new ProductsService(new ProductsRepository(connectionString));
+            this.ordersService = new OrdersService(new OrdersRepository(connectionString));
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(List<Products>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<Orders>), StatusCodes.Status200OK)]
         public IActionResult Get()
         {
-            var productItem = this.productsService.Get();
-            if (productItem == null)
+            var ordersItem = this.ordersService.Get();
+            if (ordersItem == null)
             {
                 return NotFound();
             }
-            return Ok(productItem);
+            return Ok(ordersItem);
         }
 
         [HttpGet("{id}")]
@@ -41,20 +41,20 @@ namespace ecommerse.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Get(int id)
         {
-            var productItem = this.productsService.Get(id);
-            if (productItem == null)
+            var ordersItem = this.ordersService.Get(id);
+            if (ordersItem == null)
             {
                 return NotFound();
             }
-            return Ok(productItem);
+            return Ok(ordersItem);
         }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Post([FromBody]Products products)
+        public IActionResult Post([FromBody]Orders orders, Carts carts)
         {
-            var result = this.productsService.Add(products);
+            var result = this.ordersService.Add(orders, carts);
 
             if (!result)
             {
@@ -65,7 +65,7 @@ namespace ecommerse.Controllers
         }
 
         [HttpDelete("{id}")]
-        [ProducesResponseType(typeof(Products), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Orders), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public void Delete(int id)
         {
@@ -73,7 +73,7 @@ namespace ecommerse.Controllers
             //{
             //    connection.Execute("DELETE FROM News WHERE Id = @id", new { id });
             //}
-            this.productsService.Delete(id);
+            this.ordersService.Delete(id);
         }
 
         //private static readonly List<Products> Database = new List<Products>
@@ -100,6 +100,7 @@ namespace ecommerse.Controllers
         //};
     }
 
-   
+
 
 }
+
