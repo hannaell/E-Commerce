@@ -7,9 +7,9 @@ namespace ecommerse.Services
 {
     public class ProductsService
     {
-        private readonly ProductsRepository productsRepository;
+        private readonly IProductsRepository productsRepository;
 
-        public ProductsService(ProductsRepository productsRepository)
+        public ProductsService(IProductsRepository productsRepository)
         {
             this.productsRepository = productsRepository;
         }

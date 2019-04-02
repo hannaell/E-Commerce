@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerse", "ecommerse\ecom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerse.IntegrationTests", "ecommerse.IntegrationTests\ecommerse.IntegrationTests.csproj", "{7D2B713F-488C-4DDA-A87B-9F9A659F972D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ecommerse.UnitTests", "ecommerse.UnitTests\ecommerse.UnitTests.csproj", "{59BE1610-4676-4964-A131-51D9524B35EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{7D2B713F-488C-4DDA-A87B-9F9A659F972D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D2B713F-488C-4DDA-A87B-9F9A659F972D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D2B713F-488C-4DDA-A87B-9F9A659F972D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BE1610-4676-4964-A131-51D9524B35EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BE1610-4676-4964-A131-51D9524B35EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BE1610-4676-4964-A131-51D9524B35EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BE1610-4676-4964-A131-51D9524B35EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace ecommerse.Repositories
 {
-    public class ProductsRepository
+    public class ProductsRepository : IProductsRepository
     {
         private readonly string connectionString;
 

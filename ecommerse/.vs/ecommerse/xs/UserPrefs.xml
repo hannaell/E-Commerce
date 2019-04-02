@@ -1,16 +1,14 @@
 ﻿<Properties StartupConfiguration="{E15EFA75-CEB6-4874-A770-1908B0A7122C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ecommerse.IntegrationTests/Services/ProductsServiceTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ecommerse/Controllers/ProductsController.cs">
     <Files>
-      <File FileName="ecommerse/Repositories/CartitemRepository.cs" Line="34" Column="14" />
-      <File FileName="ecommerse/Repositories/CartsRepository.cs" Line="25" Column="128" />
-      <File FileName="ecommerse/Models/Carts.cs" Line="9" Column="54" />
-      <File FileName="ecommerse/Repositories/OrdersRepository.cs" Line="44" Column="14" />
-      <File FileName="ecommerse/Models/Orders.cs" Line="13" Column="41" />
-      <File FileName="ecommerse/Services/OrdersService.cs" Line="27" Column="20" />
-      <File FileName="ecommerse/Controllers/OrdersController.cs" Line="61" Column="37" />
-      <File FileName="ecommerse/Services/CartsService.cs" Line="22" Column="8" />
-      <File FileName="ecommerse/Controllers/CartsController.cs" Line="33" Column="14" />
-      <File FileName="ecommerse.IntegrationTests/Services/ProductsServiceTests.cs" Line="116" Column="22" />
+      <File FileName="ecommerse.UnitTests/Services/ProductsSerivceTest.cs" Line="54" Column="11" />
+      <File FileName="ecommerse/appsettings.json" Line="3" Column="25" />
+      <File FileName="ecommerse.IntegrationTests/Services/ProductsServiceTests.cs" Line="91" Column="8" />
+      <File FileName="ecommerse/Services/ProductsService.cs" Line="12" Column="33" />
+      <File FileName="ecommerse/Repositories/ProductsRepository.cs" Line="49" Column="21" />
+      <File FileName="ecommerse/Models/Products.cs" Line="12" Column="42" />
+      <File FileName="ecommerse/Repositories/IProductsRepository.cs" Line="12" Column="28" />
+      <File FileName="ecommerse/Controllers/ProductsController.cs" Line="24" Column="56" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,32 +16,28 @@
           <Node name="ecommerse" expanded="True">
             <Node name="ecommerse" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="ProductsController.cs" selected="True" />
+              </Node>
               <Node name="Models" expanded="True" />
               <Node name="Repositories" expanded="True" />
               <Node name="Services" expanded="True" />
             </Node>
             <Node name="ecommerse.IntegrationTests" expanded="True">
-              <Node name="Services" expanded="True">
-                <Node name="ProductsServiceTests.cs" selected="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+            <Node name="ecommerse.UnitTests" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
               </Node>
+              <Node name="Services" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="ecommerse" expanded="True" selected="True">
-            <Node name="ecommerse.IntegrationTests" expanded="True">
-              <Node name="ecommerse" expanded="True">
-                <Node name="IntegrationTests" expanded="True">
-                  <Node name="Services" expanded="True">
-                    <Node name="ProductsServiceTests" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="ecommerse" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
