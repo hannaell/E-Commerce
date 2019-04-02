@@ -25,11 +25,11 @@ namespace ecommerse.Repositories
             }
         }
 
-        public Cartitem Get(int id)
+        public List<Cartitem> Get(int id)
         {
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                return connection.QuerySingleOrDefault<Cartitem>("SELECT * FROM Cartitems WHERE Id = @id", new { id });
+                return connection.Query<Cartitem>("SELECT * FROM Cartitems WHERE cart_id = @id", new { id }).ToList();
 
             }
         }

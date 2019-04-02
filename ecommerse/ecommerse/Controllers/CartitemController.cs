@@ -37,7 +37,7 @@ namespace ecommerse.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(Products), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<Cartitem>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Get(int id)
         {

@@ -34,13 +34,13 @@ namespace ecommerse.Repositories
             }
         }
 
-        public int Add(Orders orders, Carts carts)
+        public int Add(Orders order)
         {
             using (var connection = new MySqlConnection(this.connectionString))
             {
-                connection.Execute("INSERT INTO Orders (Firstname, Lastname, Adress, Zipcode, City, cart_id) VALUES(@Firstname, @Lastname, @Adress, @Zipcode, @City, @cart_id)", orders); 
-                var orderId = connection.QuerySingleOrDefault<int>("SELECT Id FROM Orders ORDER BY Id DESC LIMIT 1");
-                return orderId;
+                return connection.QuerySingleOrDefault<int>(@"INSERT INTO Orders (Firstname, Lastname, Adress, Zipcode, City)
+                    VALUES(@Firstname, @Lastname, @Adress, @Zipcode, @City);
+                    SELECT LAST_INSERT_ID()", order);
             }  
         }
 

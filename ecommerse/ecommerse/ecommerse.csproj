@@ -23,6 +23,5 @@
 
   <ItemGroup>
     <Compile Remove="Models\EmptyClass.cs" />
-    <Compile Remove="Controllers\OrderitemsController.cs" />
   </ItemGroup>
 </Project>

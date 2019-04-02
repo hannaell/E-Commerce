@@ -21,7 +21,7 @@ namespace ecommerse.Controllers
         public OrdersController(IConfiguration configuration)
         {
             this.connectionString = configuration.GetConnectionString("ConnectionString");
-            this.ordersService = new OrdersService(new OrdersRepository(connectionString));
+            this.ordersService = new OrdersService(new OrdersRepository(connectionString), new OrderitemsRepository(connectionString), new ProductsRepository(connectionString), new CartitemRepository(connectionString));
         }
 
         [HttpGet]
@@ -49,12 +49,13 @@ namespace ecommerse.Controllers
             return Ok(ordersItem);
         }
 
-        [HttpPost]
+        // api/orders/2   POST , Takes order customer info from Order orders and puts cartitems in cart 2 to orderitems
+        [HttpPost("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Post([FromBody]Orders orders, Carts carts)
+        public IActionResult Post(int id, [FromBody]Orders orders)
         {
-            var result = this.ordersService.Add(orders, carts);
+            var result = this.ordersService.Add(id, orders);
 
             if (!result)
             {
