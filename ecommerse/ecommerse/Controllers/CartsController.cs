@@ -54,12 +54,22 @@ namespace ecommerse.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Post([FromBody]Cartitem cartitem)
         {
+
             var result = this.cartsService.Add(cartitem);
 
             if (!result)
             {
                 return BadRequest();
             }
+
+
+            var cartResults = this.cartsService.GetCart(cartitem.cart_id);
+            if (cartResults == null)
+            {
+                this.cartsService.CreateCart(cartitem);
+            }
+
+
 
             return Ok();
         }

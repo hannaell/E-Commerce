@@ -56,7 +56,7 @@ namespace ecommerse.Services
 
             var orderId = this.ordersRepository.Add(orders);
 
-            var cartItems = this.cartitemRepository.Get(orderId);
+            var cartItems = this.cartitemRepository.Get(cart_id);
 
             var orderItems = cartItems.Select(cartItem =>
             {
@@ -70,13 +70,12 @@ namespace ecommerse.Services
                     product_price = productItem.Price
                 };
 
-            }).ToList();
+            }).ToList();    
 
             orderItems.ForEach(orderItem =>
             {
                 this.orderitemsRepository.Add(orderItem);
             });
-
 
             return true;
         }
