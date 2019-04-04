@@ -21,7 +21,6 @@ namespace ecommerse.Repositories
             using (var connection = new MySqlConnection(this.connectionString))
             {
                 return connection.Query<Cartitem>("SELECT * FROM Cartitems").ToList();
-
             }
         }
 
@@ -30,7 +29,6 @@ namespace ecommerse.Repositories
             using (var connection = new MySqlConnection(this.connectionString))
             {
                 return connection.Query<Cartitem>("SELECT * FROM Cartitems WHERE cart_id = @id", new { id }).ToList();
-
             }
         }
 

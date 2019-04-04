@@ -16,7 +16,6 @@ namespace ecommerse.Repositories
             this.connectionString = connectionString;
         }
 
-        // get cart and cartitems
         public Carts GetCart(int id)
         {
             using (var connection = new MySqlConnection(this.connectionString))
@@ -31,16 +30,6 @@ namespace ecommerse.Repositories
             }
         }
 
-        //public List<Cartitem> Get(int id)
-        //{
-        //    using (var connection = new MySqlConnection(this.connectionString))
-        //    {
-        //        return connection.Query<Cartitem>("SELECT * FROM Cartitems WHERE cart_id = @id", new { id }).ToList();
-
-        //    }
-        //}
-
-        // add to cart
         public bool Add(Cartitem cartitem)
         {
             if (true)
@@ -53,7 +42,6 @@ namespace ecommerse.Repositories
             return false;
         }
 
-        // Delete the hole cart
         public void DeleteCart(int id)
         {
             using (var connection = new MySqlConnection(this.connectionString))

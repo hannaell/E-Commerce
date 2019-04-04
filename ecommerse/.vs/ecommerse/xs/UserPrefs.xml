@@ -1,5 +1,8 @@
 ﻿<Properties StartupConfiguration="{E15EFA75-CEB6-4874-A770-1908B0A7122C}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ecommerse.UnitTests/Services/ProductsSerivceTest.cs">
+    <Files>
+      <File FileName="ecommerse.UnitTests/Services/ProductsSerivceTest.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -11,7 +14,6 @@
               <Node name="Properties" expanded="True" />
               <Node name="Repositories" expanded="True" />
               <Node name="Services" expanded="True" />
-              <Node name="Program.cs" selected="True" />
             </Node>
             <Node name="ecommerse.IntegrationTests" expanded="True">
               <Node name="Dependencies" expanded="True" />
@@ -21,7 +23,9 @@
               <Node name="Dependencies" expanded="True">
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
-              <Node name="Services" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="ProductsSerivceTest.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

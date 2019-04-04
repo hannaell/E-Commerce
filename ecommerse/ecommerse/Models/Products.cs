@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace ecommerse.Models
 {
@@ -11,8 +10,6 @@ namespace ecommerse.Models
         public int Price { get; set; }
         public string Image { get; set; }
     }
-
-
 }
 
 

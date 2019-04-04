@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using ecommerse.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-using Dapper;
-using System.Linq;
-using MySql.Data.MySqlClient;
 using ecommerse.Services;
 using ecommerse.Repositories;
 
@@ -53,8 +48,6 @@ namespace ecommerse.Controllers
 
 
     }
-
-
 
 }
 

@@ -19,11 +19,6 @@ namespace ecommerse.Services
             return this.cartsRepository.GetCart(id);
         }
 
-        //public List<Cartitem> Get(int id)
-        //{
-        //    return this.cartsRepository.Get(id);
-        //}
-
         public bool Add(Cartitem cartitem)
         {
             if (cartitem.product_id <= 0)
