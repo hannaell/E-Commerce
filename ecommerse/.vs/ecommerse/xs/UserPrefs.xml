@@ -1,7 +1,17 @@
 ﻿<Properties StartupConfiguration="{E15EFA75-CEB6-4874-A770-1908B0A7122C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ecommerse.UnitTests/Services/ProductsSerivceTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ecommerse/Services/OrderitemsService.cs">
     <Files>
-      <File FileName="ecommerse.UnitTests/Services/ProductsSerivceTest.cs" Line="1" Column="1" />
+      <File FileName="ecommerse/Models/Products.cs" Line="1" Column="14" />
+      <File FileName="ecommerse/Models/Orders.cs" Line="16" Column="2" />
+      <File FileName="ecommerse/Models/Orderitem.cs" Line="11" Column="1" />
+      <File FileName="ecommerse/Models/Cartitem.cs" Line="6" Column="20" />
+      <File FileName="ecommerse/Models/Carts.cs" Line="12" Column="1" />
+      <File FileName="ecommerse/Controllers/CartsController.cs" Line="39" Column="54" />
+      <File FileName="ecommerse/Services/CartsService.cs" Line="43" Column="48" />
+      <File FileName="ecommerse/Repositories/CartsRepository.cs" Line="58" Column="37" />
+      <File FileName="ecommerse/Services/OrdersService.cs" Line="35" Column="26" />
+      <File FileName="ecommerse/Repositories/OrderitemsRepository.cs" Line="28" Column="35" />
+      <File FileName="ecommerse/Services/OrderitemsService.cs" Line="23" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,18 +23,8 @@
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Repositories" expanded="True" />
-              <Node name="Services" expanded="True" />
-            </Node>
-            <Node name="ecommerse.IntegrationTests" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Services" expanded="True" />
-            </Node>
-            <Node name="ecommerse.UnitTests" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
               <Node name="Services" expanded="True">
-                <Node name="ProductsSerivceTest.cs" selected="True" />
+                <Node name="OrderitemsService.cs" selected="True" />
               </Node>
             </Node>
           </Node>

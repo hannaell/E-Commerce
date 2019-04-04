@@ -25,6 +25,15 @@ namespace ecommerse.Repositories
             }
         }
 
+        public List<Orderitem> Get(int orderid)
+        {
+            using (var connection = new MySqlConnection(this.connectionString))
+            {
+                return connection.Query<Orderitem>("SELECT * FROM Orderitems WHERE order_id = @orderid", new { orderid }).ToList();
+
+            }
+        }
+
         public void Add(Orderitem orderitem)
         {
 

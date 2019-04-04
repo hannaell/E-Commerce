@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace ecommerse.Models
 {
     public class Orders
@@ -9,5 +11,6 @@ namespace ecommerse.Models
         public string Adress { get; set; }
         public int Zipcode { get; set; }
         public string City { get; set; }
+        public List<Orderitem> Orderitems { get; set; }
     }
 }

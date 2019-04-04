@@ -28,7 +28,11 @@ namespace ecommerse.Services
 
         public Orders Get(int id)
         {
-            return this.ordersRepository.Get(id);
+
+            var order = this.ordersRepository.Get(id);
+            order.Orderitems = this.orderitemsRepository.Get(id);
+
+            return order;
         }
 
         public bool Add(int cart_id, Orders orders)
